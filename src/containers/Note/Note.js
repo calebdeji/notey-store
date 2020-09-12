@@ -28,7 +28,7 @@ const Note = () => {
     };
 
     if (storeContent === undefined) return <EmptySpace message='Your note store is empty' />;
-    else if (noteCotent === 'fecthing') return <p> fecthing</p>;
+    else if (noteCotent === 'fetching') return <p> </p>;
     else if (noteCotent === undefined) return <EmptySpace message='Note not found' />;
 
     return (

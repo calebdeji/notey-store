@@ -92,7 +92,7 @@ const ProcessNote = () => {
         }
     };
     if (matchedContent === 'fetching' && !isAddNote) {
-        return <p> Fecthing Details ...</p>;
+        return <p></p>;
     } else if (!isAddNote && matchedContent === undefined) {
         return <EmptySpace message='Note not found' />;
     }
