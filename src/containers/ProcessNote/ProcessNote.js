@@ -21,7 +21,7 @@ const ProcessNote = () => {
     const { pathname } = useLocation();
     const { storeContent, updateStore } = useContext(AppContext);
     const [formState, setFormState] = useState(initialFormStateValue);
-    const [matchedContent, setMatchedContent] = useState(undefined);
+    const [matchedContent, setMatchedContent] = useState('fetching');
     const {
         handleNoPopError,
         isActive,
@@ -89,6 +89,9 @@ const ProcessNote = () => {
             handleNoPopError(isAddNote ? 'Note added successfully' : 'Note edited successfully');
         }
     };
+    if (matchedContent === 'fetching') {
+        return <p> Fecthing Details ...</p>;
+    }
 
     if (!isAddNote && matchedContent === undefined) {
         return <EmptySpace message='Note not found' />;
