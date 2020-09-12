@@ -1,0 +1,62 @@
+.empty-space {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    max-height: calc(100vh - 60px);
+    padding: 10px;
+}
+.empty-space svg {
+    width: 100%;
+}
+
+@media all and (min-width: 600px) {
+    .empty-space {
+        width: max-content;
+    }
+}
+
+.empty-space__message {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    padding: 0 20px;
+}
+
+.empty-space__body {
+    animation: spring 0.9s ease-in-out infinite alternate;
+}
+
+.empty-space__iconDown {
+    animation: horizontalSpring 0.9s ease-in-out infinite alternate;
+}
+
+.empty-space__curly {
+    animation: curlySpring 0.9s ease-in-out infinite alternate;
+}
+
+@keyframes spring {
+    from {
+        transform: translateY(1px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes horizontalSpring {
+    from {
+        transform: translateX(1px);
+    }
+    to {
+        transform: translateX(0pxs);
+    }
+}
+
+@keyframes curlySpring {
+    from {
+        transform: translateX(-0.5px);
+    }
+    to {
+        transform: translateX(1px);
+    }
+}
