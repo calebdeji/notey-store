@@ -1,0 +1,48 @@
+.note-container {
+    display: grid;
+    grid-auto-flow: row;
+    padding: 30px 5%;
+
+    row-gap: 20px;
+}
+
+@media all and (min-width: 600px) {
+    .note-container {
+        padding: 30px 20%;
+    }
+}
+@media all and (min-width: 1200px) {
+    .note-container {
+        padding: 30px 30%;
+    }
+}
+
+.note-container__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.note-container__nav__back {
+    background-color: var(--white-color);
+    border: none;
+}
+
+.note-container__nav__back__icon {
+    width: 30px;
+}
+.note-container__nav__back__icon * {
+    stroke: var(--black-color);
+}
+
+.note-container__nav__edit {
+    background-color: var(--white-color);
+    border: solid 1px var(--input-border-color);
+    color: var(--black-color);
+    padding: 5px 20px;
+}
+
+.note-container__section {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 20px;
+}
