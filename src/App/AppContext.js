@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer, useState } from 'react';
+import { createContext, useEffect, useReducer } from 'react';
 import useComponentDidUpdate from '../hooks/useComponentDidUpdate';
 import { retrieveNotesFromLocalStorage, saveNotesToLocalStorage } from '../libs/ProcessLocalStorage';
 
