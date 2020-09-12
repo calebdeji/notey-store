@@ -12,6 +12,7 @@
     animation: slide-up 0.4s ease-in-out;
     z-index: 99;
     height: max-content;
+    max-height : 30px
 }
 .pop-container--no-error {
     background-color: var(--active-color);
