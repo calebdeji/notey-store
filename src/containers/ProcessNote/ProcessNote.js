@@ -45,6 +45,8 @@ const ProcessNote = () => {
             setFormState(matchedContent);
         }
 
+        setMatchedContent(undefined);
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [slugId, pathname]);
 
