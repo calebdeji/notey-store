@@ -1,0 +1,110 @@
+.home {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 20px;
+    column-gap: 20px;
+    padding: 20px 5%;
+}
+
+@media all and (min-width: 600px) {
+    .home {
+        grid-auto-flow: unset;
+        grid-template-columns: repeat(auto-fill, 45%);
+    }
+}
+
+@media all and (min-width: 800px) {
+    .home {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+.home__note {
+    position: relative;
+    height: max-content;
+}
+
+.home__note__section {
+    height: max-content;
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 10px;
+    border: solid 1px var(--input-border-color);
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.4s ease-in-out;
+    padding-bottom: 30px;
+}
+
+.home__note__section__header {
+    display: flex;
+    justify-content: space-between;
+}
+.home__note__section__title {
+    max-width: 90%;
+}
+.home__note__section__header__edit-button {
+    width: max-content;
+    background-color: var(--white-color);
+    border: solid 1px var(--input-border-color);
+}
+.home__note__section__icon {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    width: max-content;
+}
+.home__note__section__icon__button {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 3px;
+    padding: 5px 10px;
+    border: solid 1px var(--input-border-color);
+    border-radius: 2px;
+}
+.home__note__section__icon__button span {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    display: block;
+    background-color: var(--black-color);
+}
+.home__note__section__icon_actions {
+    display: grid;
+    position: absolute;
+    bottom: -10px;
+    background-color: rgba(0, 0, 0);
+    right: 0;
+    animation: slide-up 0.4s ease-in-out forwards;
+    box-shadow: var(--header-box-shadow);
+    /* border: solid 1px var(--black-color); */
+    border-radius: 10px;
+    width: 100px;
+}
+
+@keyframes slide-up {
+    from {
+        bottom: -10px;
+    }
+    to {
+        bottom: 0px;
+    }
+}
+.home__note__section__icon_actions button {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    border: none;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in;
+    text-align: left;
+}
+@media all and (hover: hover) {
+    .home__note__section:hover {
+        transform: skew(10deg);
+        cursor: pointer;
+    }
+    .home__note__section__icon_actions button:hover {
+        background-color: var(--black-color);
+        color: var(--white-color);
+    }
+}
