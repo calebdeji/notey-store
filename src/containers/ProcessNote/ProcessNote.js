@@ -91,11 +91,9 @@ const ProcessNote = () => {
             handleNoPopError(isAddNote ? 'Note added successfully' : 'Note edited successfully');
         }
     };
-    if (matchedContent === 'fetching') {
+    if (matchedContent === 'fetching' && !isAddNote) {
         return <p> Fecthing Details ...</p>;
-    }
-
-    if (!isAddNote && matchedContent === undefined) {
+    } else if (!isAddNote && matchedContent === undefined) {
         return <EmptySpace message='Note not found' />;
     }
 

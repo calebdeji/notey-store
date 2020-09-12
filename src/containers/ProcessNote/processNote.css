@@ -41,6 +41,8 @@
 }
 
 .processNoteContainer__form__section__quill {
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
 }
 

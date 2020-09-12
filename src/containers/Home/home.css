@@ -2,6 +2,7 @@
     display: grid;
     grid-auto-flow: row;
     row-gap: 20px;
+    -webkit-column-gap: 20px;
     column-gap: 20px;
     padding: 20px 5%;
 }
@@ -21,10 +22,14 @@
 
 .home__note {
     position: relative;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
 }
 
 .home__note__section {
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     display: grid;
     grid-auto-flow: row;
@@ -32,7 +37,9 @@
     border: solid 1px var(--input-border-color);
     border-radius: 10px;
     padding: 10px;
+    transition: -webkit-transform 0.4s ease-in-out;
     transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
     padding-bottom: 30px;
 }
 
@@ -44,6 +51,8 @@
     max-width: 90%;
 }
 .home__note__section__header__edit-button {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     background-color: var(--white-color);
     border: solid 1px var(--input-border-color);
@@ -52,11 +61,14 @@
     position: absolute;
     bottom: 5px;
     right: 10px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 }
 .home__note__section__icon__button {
     display: grid;
     grid-auto-flow: column;
+    -webkit-column-gap: 3px;
     column-gap: 3px;
     padding: 5px 10px;
     border: solid 1px var(--input-border-color);
@@ -75,11 +87,21 @@
     bottom: -10px;
     background-color: rgba(0, 0, 0);
     right: 0;
+    -webkit-animation: slide-up 0.4s ease-in-out forwards;
     animation: slide-up 0.4s ease-in-out forwards;
     box-shadow: var(--header-box-shadow);
     /* border: solid 1px var(--black-color); */
     border-radius: 10px;
     width: 100px;
+}
+
+@-webkit-keyframes slide-up {
+    from {
+        bottom: -10px;
+    }
+    to {
+        bottom: 0px;
+    }
 }
 
 @keyframes slide-up {
@@ -100,6 +122,7 @@
 }
 @media all and (hover: hover) {
     .home__note__section:hover {
+        -webkit-transform: skew(10deg);
         transform: skew(10deg);
         cursor: pointer;
     }

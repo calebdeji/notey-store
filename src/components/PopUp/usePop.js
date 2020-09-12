@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const usePop = (handleClick) => {
     const [closeClassName, setcloseClassName] = useState(false);
@@ -9,7 +9,8 @@ const usePop = (handleClick) => {
         return () => {
             clearTimeout(timerId);
         };
-    });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
     const closeModal = () => {
         setcloseClassName(true);
         setTimeout(() => {
@@ -22,7 +23,7 @@ const usePop = (handleClick) => {
 export const usePopActivation = () => {
     const [isActive, setisActive] = useState(false);
     const [isPopUpError, setisPopUpError] = useState(false);
-    const [popUpMessage, setpopUpMessage] = useState("");
+    const [popUpMessage, setpopUpMessage] = useState('');
 
     const handlePopUpError = (message) => {
         setisPopUpError(true);
@@ -32,7 +33,7 @@ export const usePopActivation = () => {
     const cancelAllSubscription = () => {
         setisPopUpError(false);
         setisActive(false);
-        setpopUpMessage("");
+        setpopUpMessage('');
     };
     const handleIsActive = (status) => {
         setisActive(status);

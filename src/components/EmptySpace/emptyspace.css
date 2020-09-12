@@ -11,6 +11,8 @@
 
 @media all and (min-width: 600px) {
     .empty-space {
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
     }
 }
@@ -23,40 +25,82 @@
 }
 
 .empty-space__body {
+    -webkit-animation: spring 0.9s ease-in-out infinite alternate;
     animation: spring 0.9s ease-in-out infinite alternate;
 }
 
 .empty-space__iconDown {
+    -webkit-animation: horizontalSpring 0.9s ease-in-out infinite alternate;
     animation: horizontalSpring 0.9s ease-in-out infinite alternate;
 }
 
 .empty-space__curly {
+    -webkit-animation: curlySpring 0.9s ease-in-out infinite alternate;
     animation: curlySpring 0.9s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes spring {
+    from {
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+    }
+    to {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
 }
 
 @keyframes spring {
     from {
+        -webkit-transform: translateY(1px);
         transform: translateY(1px);
     }
     to {
+        -webkit-transform: translateY(0px);
         transform: translateY(0px);
+    }
+}
+
+@-webkit-keyframes horizontalSpring {
+    from {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+    }
+    to {
+        -webkit-transform: translateX(0pxs);
+        transform: translateX(0pxs);
     }
 }
 
 @keyframes horizontalSpring {
     from {
+        -webkit-transform: translateX(1px);
         transform: translateX(1px);
     }
     to {
+        -webkit-transform: translateX(0pxs);
         transform: translateX(0pxs);
+    }
+}
+
+@-webkit-keyframes curlySpring {
+    from {
+        -webkit-transform: translateX(-0.5px);
+        transform: translateX(-0.5px);
+    }
+    to {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
     }
 }
 
 @keyframes curlySpring {
     from {
+        -webkit-transform: translateX(-0.5px);
         transform: translateX(-0.5px);
     }
     to {
+        -webkit-transform: translateX(1px);
         transform: translateX(1px);
     }
 }
