@@ -22,7 +22,6 @@ const AppContext = createContext(initialStore);
  */
 const reducer = (state, action) => {
     const { type, value, id } = action;
-    console.log({ action });
     switch (type) {
         case 'add-note':
             return [...state, { ...value, id }];
