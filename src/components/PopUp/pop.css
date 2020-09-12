@@ -42,7 +42,7 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     -webkit-column-gap: 3px;
-    column-gap: 3px;
+    column-gap: 7px;
     align-items: center;
 }
 
