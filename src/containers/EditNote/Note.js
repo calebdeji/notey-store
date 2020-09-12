@@ -15,6 +15,8 @@ const EditNote = () => {
             return id === slugId;
         });
         setMatchedContent(matchedContent);
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     if (matchedContent === undefined || storeContent === undefined) {
