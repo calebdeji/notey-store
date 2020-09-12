@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&family=Satisfy&display=swap');
+.header {
+    height: 60px;
+    box-shadow: var(--header-box-shadow);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: var(--white-color);
+    align-items: center;
+}
+
+.header__app-name {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Satisfy', cursive;
+    color: var(--black-color);
+}
+
+.header__add-note {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+}
