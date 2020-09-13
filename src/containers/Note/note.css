@@ -46,3 +46,9 @@
     grid-auto-flow: row;
     row-gap: 20px;
 }
+.note-container__section__article img {
+    width: 100%;
+    margin: 10px 0;
+    max-height: 400px;
+    object-fit: contain;
+}
