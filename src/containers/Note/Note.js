@@ -49,7 +49,7 @@ const Note = () => {
                 </nav>
                 <section className='note-container__section '>
                     <h3> {noteCotent.title} </h3>
-                    <article>
+                    <article className='note-container__section__article'>
                         <Markdown escapeHtml={false} source={noteCotent.content} />
                     </article>
                 </section>
