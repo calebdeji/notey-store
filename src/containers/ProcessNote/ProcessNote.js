@@ -10,6 +10,7 @@ import { Helmet } from 'react-helmet';
 import { usePopActivation } from '../../components/PopUp/usePop';
 import PopUp from '../../components/PopUp/PopUp';
 import EmptySpace from '../../components/EmptySpace/EmptySpace';
+import { editorModules, editorFormats } from './EditorProps';
 
 const initialFormStateValue = {
     title: '',
@@ -74,8 +75,10 @@ const ProcessNote = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        if (isStringEmpty(formState.title) || isStringEmpty(formState.content)) {
-            handlePopUpError('None of the field should be empty');
+        if (isStringEmpty(formState.title)) {
+            handlePopUpError('Title field cannot be empty');
+        } else if (isStringEmpty(formState.content)) {
+            handlePopUpError('Content field cannot be empty');
         } else {
             const newNoteId = storeContent?.length || 0;
             updateStore({
@@ -130,6 +133,8 @@ const ProcessNote = () => {
                             onChange={(value) => {
                                 handleChange({ target: { id: 'content', value } });
                             }}
+                            modules={editorModules}
+                            formats={editorFormats}
                         />
                     </section>
                     <button className='processNoteContainer__form__save-button'>Save</button>
