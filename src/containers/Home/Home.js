@@ -25,7 +25,7 @@ const Home = () => {
         handleNoPopError('Note deleted successfully');
     };
 
-    if (storeContent === undefined || storeContent.length === 0) {
+    if (storeContent === undefined || storeContent.length === 0 || !storeContent[0]?.id) {
         return <EmptySpace message='Ooops! You have no saved notes' />;
     }
 

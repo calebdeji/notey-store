@@ -26,9 +26,11 @@ const Note = () => {
     const navigateToEditNote = () => {
         push(`${note}/edit/${noteCotent.id}`);
     };
+    console.log({ noteCotent });
 
-    if (storeContent === undefined) return <EmptySpace message='Your note store is empty' />;
-    else if (noteCotent === 'fetching') return <p> </p>;
+    if (noteCotent === 'fetching') return <p> </p>;
+    else if (storeContent === undefined || !storeContent[0]?.id)
+        return <EmptySpace message='Your note store is empty' />;
     else if (noteCotent === undefined) return <EmptySpace message='Note not found' />;
 
     return (
