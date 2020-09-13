@@ -37,7 +37,7 @@ const ProcessNote = () => {
     }, [slugId]);
 
     useEffect(() => {
-        if (slugId && storeContent.length !== 0 && !storeContent[0]?.id) {
+        if (slugId && storeContent.length !== 0) {
             const matchedContent = storeContent.find(({ id }) => {
                 return id === slugId;
             });
